@@ -5,8 +5,8 @@ Run [ardupilot's software-in-the-loop
 locally in a Docker container.
 
 ```sh
-docker buildx build -t uaarg-sitl -f SITL.Dockerfile  # Build the container (takes ~20mins on my machine)
-docker run -p 5760:5760 --rm -it uaarg-sitl:latest    # Run the container
+docker buildx build -t uaarg-sitl -f SITL.Dockerfile .  # Build the container (takes ~20mins on my machine)
+docker run -p 5760:5760 --rm -it uaarg-sitl:latest      # Run the container
 
 # Connect to the SITL instance, eg. with mavproxy
 mavproxy.py --master=tcp:127.0.0.1:5760
